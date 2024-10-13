@@ -1,0 +1,4 @@
+sc create MailMyService binPath= "C:\Users\leon1\Documents\Repo_Github\MailMyService\bin\Release\MailMyService.exe"
+
+
+sc start MailMyService

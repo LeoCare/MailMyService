@@ -1,0 +1,7 @@
+C:\Users\leon1\Documents\Repo_Github\MailMyService\obj\Debug\MailMyService.csproj.AssemblyReference.cache
+C:\Users\leon1\Documents\Repo_Github\MailMyService\obj\Debug\MailMyService.csproj.CoreCompileInputs.cache
+C:\Users\leon1\Documents\Repo_Github\MailMyService\bin\Debug\MailMyService.exe.config
+C:\Users\leon1\Documents\Repo_Github\MailMyService\bin\Debug\MailMyService.exe
+C:\Users\leon1\Documents\Repo_Github\MailMyService\bin\Debug\MailMyService.pdb
+C:\Users\leon1\Documents\Repo_Github\MailMyService\obj\Debug\MailMyService.exe
+C:\Users\leon1\Documents\Repo_Github\MailMyService\obj\Debug\MailMyService.pdb
