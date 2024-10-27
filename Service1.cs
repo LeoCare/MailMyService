@@ -57,8 +57,9 @@ namespace MailMyService
         /// </summary>
         private void OnElapsedTime(object source, ElapsedEventArgs e)
         {
-            _emailCommand.ComprobarPendientes('D'); //Deudores
-            _emailCommand.ComprobarPendientes('A'); //Acreedores
+            _emailCommand.ComprobarPendientes();
+            _emailCommand.GenerarCodigoRecuperacion();
+
         }
 
        /// <summary>
@@ -72,6 +73,9 @@ namespace MailMyService
 
 
         #region SOCKET
+        /// <summary>
+        /// Metodo que establece la comunicacion con el cliente
+        /// </summary>
         private void StartServer()
         {
             try
@@ -100,6 +104,10 @@ namespace MailMyService
         }
 
 
+        /// <summary>
+        /// Metodo que escucha la comunicacion con el cliente
+        /// </summary>
+        /// <param name="clientObj">cliente</param>
         private void ClienteHandle(object clientObj)
         {
             TcpClient client = (TcpClient)clientObj;
