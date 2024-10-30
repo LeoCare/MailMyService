@@ -1,13 +1,9 @@
 ﻿using MySqlConnector;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net.Mail;
 using System.Net.Mime;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+
 
 namespace MailMyService
 {
@@ -272,6 +268,11 @@ namespace MailMyService
         {
             try
             {
+
+                string fechaCreacionTexto = fecha_creacion.HasValue
+                    ? fecha_creacion.Value.ToString("dd/MM/yyyy")
+            :       "No disponible";
+
                 MailMessage mail = new MailMessage();
                 SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
 
@@ -374,10 +375,10 @@ namespace MailMyService
                     <img src='cid:logo' alt='Mis Cuentas App' style='width: 100px;'/>
                     <p>Hola {nombre},</p>
                     <p>{contenido}</p>
-                    <h3>Datos de la hoja:</h3>
+                    <h3>Codigo de recuperacion:</h3>
                     <table style='border-collapse: collapse;'>
                         <tr>
-                            <td style='padding: 8px; font-weight: bold;'>Hoja:</td>
+                            <td style='padding: 8px; font-weight: bold;'>Codigo:</td>
                             <td style='padding: 8px;'>{codigo}</td>
                         </tr>                 
                     </table>
